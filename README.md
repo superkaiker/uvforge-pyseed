@@ -1,31 +1,82 @@
-[project]
-name = "plantilla-python-uv"
-version = "0.1.0"
-description = "Plantilla reutilizable para proyectos Python gestionados con uv"
-readme = "README.md"
-authors = [
-    { name = "Enrique_Acero", email = "acero29@gmail.com" }
-]
-requires-python = ">=3.13"
-dependencies = []
+﻿# UVForge PySeed
 
-[project.scripts]
-plantilla-python-uv = "plantilla_python_uv.main:main"
+Reusable Python project template powered by **uv**, **pytest** and **Ruff**.
 
-[build-system]
-requires = ["uv_build>=0.13.9,<0.14.0"]
-build-backend = "uv_build"
+A clean and reproducible starting point for building Python applications with a consistent development environment.
 
-[dependency-groups]
-dev = [
-    "pytest>=9.2.0",
-    "ruff>=0.17.5",
-]
-[tool.ruff]
-line-length = 88
-target-version = "py313"
+## Features
 
-[tool.pytest.ini_options]
-testpaths = ["tests"]
-python_files = ["test_*.py"]
+- Python 3.13+
+- Dependency and environment management with uv
+- Pytest for automated testing
+- Ruff for linting and code quality
+- src layout for package organization
+- Reusable project structure
 
+## Requirements
+
+- Python 3.13 or newer
+- uv
+
+## Getting started
+
+Clone or create a new repository using this template.
+
+Open the project directory:
+
+```powershell
+cd your-project
+```
+
+Install dependencies:
+
+```powershell
+uv sync
+```
+
+## Run the application
+
+```powershell
+uv run plantilla-python-uv
+```
+
+## Run tests
+
+```powershell
+uv run pytest
+```
+
+## Check code quality
+
+```powershell
+uv run ruff check .
+```
+
+## Project structure
+
+```text
+project/
+├── src/
+│   └── plantilla_python_uv/
+│       ├── __init__.py
+│       └── main.py
+├── tests/
+│   └── test_ejemplo.py
+├── .gitignore
+├── .python-version
+├── README.md
+├── pyproject.toml
+└── uv.lock
+```
+
+## Development principles
+
+- Keep dependencies to a minimum.
+- Use reproducible environments.
+- Write automated tests.
+- Maintain readable and consistent code.
+- Add tools only when they provide real value.
+
+## License
+
+No license has been specified yet.
